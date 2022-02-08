@@ -39,7 +39,7 @@ function genLv22(max) {
 function randLv(lv){
   //console.log("randQuiz()");
   let i = lv[0].length, randPos, temp=[];
-  TL.innerText = i;
+  //TL.innerText = i;
   while(--i > 0){
     randPos = Math.floor(Math.random() * (i+1));
     console.log("randPos = "+randPos);
@@ -57,7 +57,7 @@ function genLv2(AS, AE, BS, BE) {
   let lv2 = [[],[],[]];
   let lv = randLv(genLv(AS,AE,BS,BE));
   lv2[0] = lv[0];
-  for(int i=0;i<lv[1].length;i++) {
+  for(let i=0;i<lv[1].length;i++) {
     let lv22 = genLv22(lv[1][i]);
     let randPos = Math.floor(Math.random() * (lv22[0].length+1));
     lv2[1].push(lv22[0][randPos)]);

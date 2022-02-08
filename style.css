@@ -78,6 +78,7 @@ main {
 }
 
 .answer {
+  width: 65%;
   border: 2px solid black;
   flex-direction: column;
 }

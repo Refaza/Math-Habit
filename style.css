@@ -26,6 +26,7 @@ body {
 main {
   position: relative;
   width: 100rem;
+  max-width: 95%;
   height: 60rem;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
@@ -37,8 +38,10 @@ main {
 }
 
 .player {
+  /*border: 2px solid black;*/
+  border-radius: 9px;
   flex: 50%;
-  padding: 9rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,14 +56,17 @@ main {
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 300;
-  margin-bottom: 1rem;
+  margin: 5px auto;
+  /*margin-bottom: 1rem;*/
 }
 
 .score {
-  font-size: 8rem;
+  font-size: 7rem;
   font-weight: 300;
+  /*color: #35ce2c;*/
   color: #c7365f;
-  margin-bottom: auto;
+  margin: 5px;
+  /*margin-bottom: auto;*/
 }
 
 .player--active {
@@ -77,10 +83,46 @@ main {
   opacity: 1;
 }
 
+.bar {
+  width: 100%;
+  height: 12%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: auto;
+  /*border: 2px solid black;*/
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: space-between;
+  align-content: center;
+  flex-flow: column wrap;
+}
+
+.quiz {
+  width: 100%;
+  height: 40%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: auto;
+  /*border: 2px solid black;*/
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
+}
+
 .answer {
-  width: 80%;
-  border: 2px solid black;
-  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: auto;
+  /*border: 2px solid black;*/
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-content: center;
+  flex-flow: row wrap;
 }
 
 .current {
@@ -88,7 +130,9 @@ main {
   opacity: 0.8;
   border-radius: 9px;
   color: #fff;
-  width: 48%;
+  width: 47%;
+  height: 47%;
+  margin: 5px auto;
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
@@ -107,26 +151,44 @@ main {
 
 /* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
-  position: absolute;
+  /*position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%);*/
+  width: 100%;
+  height: 2.5rem;
   color: #444;
   background: none;
   border: none;
   font-family: inherit;
   font-size: 1.8rem;
   text-transform: uppercase;
-  cursor: pointer;
+  /*cursor: pointer;*/
   font-weight: 400;
   transition: all 0.2s;
 
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: #A0A0A0;
+  background-color: rgba(160, 160, 160, 0.6);
   backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.timeLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  background-color: blue;
+}
+
+.quizLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10%;
+  background-color: #DEDEDE;
 }
 
 .btn::first-letter {
@@ -146,7 +208,7 @@ main {
 }
 
 .btn:active {
-  transform: translate(-50%, 3px);
+  /*transform: translate(-50%, 3px);*/
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
